@@ -1,0 +1,411 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "process": "Process",
+    "blog": "Blog",
+    "news": "News",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "HomePage": {
+    "title": "Let's work together to create amazing software",
+    "description": "We are a development studio helping teams ship products that users love.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "clients_heading": "Integrations KONDAX excels at",
+    "system": {
+      "title": "Maximize ROI with minimal starting cost.",
+      "description": "Start with a <strong>minimal setup delivering results in 2 weeks</strong>, then scale based on proven numbers.Automate manual work and shift your team's time to revenue-driving tasks. With <strong>an offensive systemization</strong>, outpace competitors and maximize profitability."
+    },
+    "speed": {
+      "title": "Speed as a competitive advantage.",
+      "description": "An ultra-fast PDCA cycle: <strong>2 weeks to validate, 1 week to implement improvements</strong>.Respond to market changes instantly and win customers before competitors notice. <strong>Invest to buy time</strong> and eliminate opportunity loss to maximize revenue."
+    },
+    "services": {
+      "marketing": {
+        "title": "Marketing & Sales Enablement",
+        "body": "Build an acquisition engine that <strong>triples inquiries from the first month</strong>.Web/LP production (as fast as 2 weeks, from ¥5,000/month) clarifies the value proposition in the first view with built-in CTA and analytics. Maximize conversion points by aligning inquiry forms with LINE funnels.A 24/7 AI responder secures night-time opportunities. Automate bookings, inquiries, and quotes with seamless human escalation. Automated follow-ups by lead temperature can lift conversion rates by up to 40%."
+      },
+      "ai": {
+        "title": "AI Content & Ops Efficiency",
+        "body": "An AI system that <strong>doubles revenue by improving CVR and cutting effort</strong>.Auto-generate product copy, blogs, newsletters, and proposals—turning “writing time” into “selling time.” Recommend the best items from browsing and purchase history to drive cross/upsell. Cut document prep from 3 hours to 15 minutes while improving satisfaction.Automate internal knowledge and FAQs with cross-doc search (contracts/manuals/minutes) to reduce response time by 80% and halve onboarding time."
+      },
+      "automation": {
+        "title": "Automation & System Development",
+        "body": "<strong>Reduce manual work by 70%</strong> and let staff focus on strategy.90-second inventory sync and fully automated quoting-to-invoicing eliminate human errors. Month-end closing drops from 3 days to 30 minutes, improving cash flow.Web app/business system development delivers visible results in a week. Operates day-one with designs aligned to real workflows. Start with PoC and expand only areas proven effective to reliably stack results at minimal cost."
+      },
+      "ecommerce": {
+        "title": "E-commerce & Revenue Maximization",
+        "body": "An integrated system that <strong>boosts profit by 150%</strong> via revenue visibility and assured collection.Supports all revenue models (subscriptions, passes, points, coupons). Integrate payments with accounting for real-time revenue tracking and reliable collection.Analyze purchasing behavior to automate repeat proposals at optimal timings. Improve LTV by up to 30% and build a stable revenue base. Reduce cart abandonment from 68% to 35%."
+      },
+      "data": {
+        "title": "Data Analytics & Ongoing Growth",
+        "body": "A co-pilot service that <strong>tells you “what to do today” every morning</strong> and owns the outcome.Unify sales/CVR/LTV/utilization to surface the next move with numbers. Prioritize initiatives across Ads/CRM/EC automatically for decisive action.With responses within 24h, weekly improvements, and monthly reports, we stay until results are achieved."
+      }
+    },
+    "cta": {
+      "title": "Run the work of 30 with a team of 10.",
+      "description": "<strong>Go live with a minimal setup → Verify with numbers → Invest only where it works.</strong>Edge computing × SQL × Workflows × AI enables small teams to operate at enterprise/international scale.90s inventory sync, −70% manual work, and optimized ops cost with Zero Trust security.",
+      "stats": {
+        "stat1": { "value": "2 weeks~", "label": "Minimal setup, fastest delivery" },
+        "stat2": { "value": "6 months~", "label": "ROI, sustained growth" },
+        "stat3": { "value": "-70%", "label": "Less manual, lower cost" },
+        "stat4": { "value": "5 min", "label": "Finish admin tasks" }
+      }
+    }
+  },
+  "AnimationHeadLine": {
+    "lines": [
+      "Turn 10 people’s time",
+      "into the value of 30."
+    ],
+    "subtitle": {
+      "p1": "Maximize ROI with <strong>revenue-driving system development</strong>. From AI adoption to automation and marketing, we support end-to-end to achieve <strong>payback within 6 months</strong>.",
+      "p2": "Build a sustainable growth engine with an offensive, systemized approach."
+    }
+  },
+  "AboutPage": {
+    "title": "About Us",
+    "description": "We are a team of passionate developers and designers.",
+    "og_title": "About Us | KONDAX",
+    "og_description": "We are a development partner that helps you grow your business with a small team. We start with a minimal configuration, verify with KPIs, and invest only in areas that show results.",
+    "intro": {
+      "title": "Run big with a small team.",
+      "p1": "We build systems with Edge runtime × SQL × Workflows × AI to let 10 people do the work of 30. Start small, invest only where results show, and optimize total cost.",
+      "p2": "We cover websites/LPs, LINE Official/Mini Apps, web apps/business systems, automation (n8n/Inngest), e-commerce (Shopify/Stripe) and AI (chat/summary/recommendation/RAG). We iterate continuously based on KPIs.",
+      "p3": "Security is standardized with Zero Trust, least privilege and audit logs. Even with a $5/month setup, we maintain enterprise-grade availability and operations. First reply within 24h and 1-week PoC to accelerate decisions."
+    },
+    "stats": {
+      "stat1": { "value": "1 wk", "label": "PoC (validation)" },
+      "stat2": { "value": "6 mo", "label": "ROI guideline" },
+      "stat3": { "value": "−70%", "label": "Less manual work" },
+      "stat4": { "value": "99.9%", "label": "SLO (stable ops)" }
+    },
+    "culture": {
+      "eyebrow": "Culture",
+      "title": "Start small, move fast, scale by results.",
+      "description": "We launch with a minimal setup, align on numbers and improve continuously. We balance outcomes with safety (Zero Trust) tailored to your operations.",
+      "items": {
+        "item1": { "title": "Outcome first", "body": "Prioritize results over features. Weekly sprints → KPI validation. Invest only where it works." },
+        "item2": { "title": "Speed × Validation", "body": "24h first reply and iterative PoCs keep decisions moving. We standardize non-stop operations." },
+        "item3": { "title": "Security & Trust", "body": "Zero Trust, least privilege, audit logs by default. Transparent operations build long-term trust." }
+      }
+    },
+    "team": {
+      "person1": {
+        "role": "Founder / Sole proprietor",
+        "message": "I’m an independent developer who turns on-site friction into systems. I ship something working quickly and co-drive the project hands-on to avoid misalignment. With AI, we speed up and cut waste to build the best-fit system for your business together."
+      }
+    }
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "description": "Stay up to date with the latest industry news and insights.",
+    "eyebrow": "Blog",
+    "pageTitle": "The latest articles and news",
+    "pageDescription": "Stay up-to-date with the latest industry news as our marketing teams finds new ways to re-purpose old CSS tricks articles.",
+    "readMore": "Read more",
+    "published": "Published",
+    "noPosts": "No posts found",
+    "backToBlog": "Back to blog",
+    "postNotFound": "Post not found",
+    "postNotFoundDescription": "The requested post could not be found.",
+    "invalidSlug": "Invalid slug",
+    "invalidSlugDescription": "The requested post slug is invalid.",
+    "categoriesLabel": "Categories",
+    "allCategories": "All",
+    "og_title": "Blog | KONDAX",
+    "og_description": "KONDAX's blog - Stay up to date with the latest industry news and insights.",
+    "og_fallback_description": "KONDAX blog post"
+  },
+  "NewsPage": {
+    "title": "News",
+    "description": "Stay informed about our latest company updates.",
+    "eyebrow": "News",
+    "pageTitle": "Latest news",
+    "pageDescription": "Stay informed about our latest company updates and industry trends.",
+    "readMore": "Read more",
+    "published": "Published",
+    "noPosts": "No news found",
+    "backToNews": "Back to news",
+    "newsNotFound": "News not found",
+    "newsNotFoundDescription": "The requested news could not be found.",
+    "invalidSlug": "Invalid slug",
+    "invalidSlugDescription": "The requested news slug is invalid.",
+    "og_title": "NEWS | KONDAX",
+    "og_description": "KONDAX's news - Stay informed about our latest company updates and industry trends."
+  },
+  "ContactPage": {
+    "title": "Contact",
+    "description": "We'd love to hear from you.",
+    "getInTouch": "Get in touch",
+    "email": "Email",
+    "phone": "Phone",
+    "og_title": "CONTACT | KONDAX",
+    "og_description": "KONDAX's contact page - We'd love to hear from you.",
+    "pageTitle": "Contact",
+    "pageDescription": "Please fill in the details and submit the form.",
+    "form": {
+      "heading": "Please contact us using the form below.",
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "phone": "Phone",
+      "messagePlaceholder": "Your message",
+      "budget": {
+        "legend": "Estimated budget",
+        "lt50": "Up to ¥500,000",
+        "lt100": "Up to ¥1,000,000",
+        "lt300": "Up to ¥3,000,000",
+        "gte300": "¥3,000,000+",
+        "gte500": "¥5,000,000+",
+        "gte1000": "¥10,000,000+"
+      },
+      "topicPlaceholder": "Select a topic",
+      "submit": "Submit",
+      "submitting": "Submitting..."
+    },
+    "topics": {
+      "contact": "General inquiry",
+      "partner": "Partnerships",
+      "estimate": "Request a quote",
+      "monitor": "Free beta program",
+      "other": "Other"
+    },
+    "partner": {
+      "heading": "Looking for partners",
+      "description": "We're seeking business partners to co-create new value.Let's collaborate across development, marketing and sales, and grow together by leveraging each other's strengths."
+    }
+  },
+  "ProcessPage": {
+    "title": "Process",
+    "description": "Learn about our development process.",
+    "og_title": "PROCESS | KONDAX",
+    "og_description": "KONDAX's process - Learn about our development process.",
+    "intro": {
+      "title": "Co-creating outcome-driven development",
+      "description": "With a <strong>build-then-improve</strong> approach, we build resilient systems. Start small, validate impact, and safely scale only what works — crafting the right solution together as your business grows."
+    },
+    "discover": {
+      "title": "Discovery & Problem Finding",
+      "p1": "Tell us your <strong>pain points and goals</strong>. We observe real operations on-site to find time sinks and common error points.",
+      "p2": "We quantify <strong>wasted time and cost</strong> (e.g., ‘3 days/month reporting’, ‘5 missed order checks/month’) and <strong>prioritize</strong> the highest-impact fixes.",
+      "p3": "We provide a proposal that clarifies <strong>ROI</strong> (e.g., ‘Invest ¥X → save Y hours/year, cut ¥Z cost’). If impact is unlikely, we’ll say so honestly.",
+      "tasks": {
+        "title": "Activities in this phase",
+        "i1": "On-site visit & observation",
+        "i2": "Estimate cost-saving effect",
+        "i3": "Calculate payback period",
+        "i4": "Interview frontline staff",
+        "i5": "Run small tests",
+        "i6": "Draft concrete improvements"
+      }
+    },
+    "build": {
+      "title": "Build & Improve Cycle",
+      "p1": "We use a <strong>‘start small, grow big’</strong> approach. Ship core features in 1–2 weeks, validate usability and impact with actual usage, and quickly refine.",
+      "p2": "Unlike big-bang plans, we <strong>welcome course changes</strong>. We respond within <strong>24 hours</strong> and keep the system optimal for ‘now’.",
+      "p3": "We demo working software every two weeks and review results numerically so you can <strong>feel the impact of your investment</strong>.",
+      "values": {
+        "title": "How this benefits you",
+        "i1": { "label": "Confidence", "body": "Daily updates and 2-week reviews make spending transparent." },
+        "i2": { "label": "Flexibility", "body": "Adapt to changes and new ideas without extra cost." },
+        "i3": { "label": "Early impact", "body": "See benefits from week one and scale with confidence." },
+        "i4": { "label": "Lower risk", "body": "Start small to avoid big failures and fix issues early." }
+      }
+    },
+    "deliver": {
+      "title": "Launch & Impact Review",
+      "p1": "We start with a <strong>trial period</strong> using real data, let your team get comfortable, then go live.",
+      "p2": "Post-launch, we provide <strong>24h support</strong> for issues like outages or how-tos so your operations never stop.",
+      "p3": "We measure <strong>impact</strong> with numbers (hours saved, cost reduced, revenue up) and propose further improvements if needed.",
+      "tasks": {
+        "title": "Activities in this phase",
+        "i1": { "title": "Phased go-live", "body": "<strong>1 week in test</strong>: validate features with real data<br></br><strong>1 week pilot</strong>: limited rollout to specific teams/users<br></br><strong>Company-wide</strong>: full launch after validation<br></br>Have a quick rollback plan just in case" },
+        "i2": { "title": "Enterprise-grade operations", "body": "<strong>Google Cloud/Vercel/Cloudflare</strong>: 99.99% uptime cloud infra<br></br><strong>24/7 monitoring</strong>: detect and act on anomalies fast<br></br><strong>Automated backups</strong>: daily with 30-day retention<br></br><strong>Security</strong>: SSL, access control, firewall<br></br><strong>ZERO TRUST</strong>: stronger data access posture" },
+        "i3": { "title": "Ongoing growth support", "body": "<strong>Monthly reviews</strong>: report impact and propose improvements<br></br><strong>Feature expansion</strong>: plan/implement as you grow<br></br><strong>Incident response</strong>: first response within 12h on average<br></br><strong>Training</strong>: regular sessions to boost adoption" }
+      }
+    },
+    "values": {
+      "eyebrow": "Our Strengths",
+      "title": "Six values that fuel SMB growth",
+      "description": "We deliver systems that <strong>show results, are easy to use, and make sense for cost</strong> — not enterprise-scale overkill. We grow with your business as a long-term partner.",
+      "items": {
+        "i1": { "title": "Thorough listening", "body": "<strong>Frontline-focused</strong>: hear from actual users, not just execs<br></br><strong>Industry-aware</strong>: understand challenges across sectors<br></br><strong>Budget-fit</strong>: right-sized proposals from ¥50k–¥2M/month" },
+        "i2": { "title": "Reliable schedules", "body": "<strong>2-week progress checks</strong>: build in small wins<br></br><strong>Flexible to change</strong>: adjust scope without extra cost (large changes quoted)<br></br><strong>Evidence-based estimates</strong>: based on past delivery" },
+        "i3": { "title": "Ops-first design", "body": "<strong>Fit to your workflow</strong>: leverage existing processes<br></br><strong>Stepwise rollout</strong>: adapt gradually, not all at once<br></br><strong>Training included</strong>: ops manuals and sessions" },
+        "i4": { "title": "Clear reporting", "body": "<strong>Daily Slack updates</strong> in plain language<br></br><strong>Quantified results</strong>: hours saved, revenue up<br></br><strong>Early issue sharing</strong>: transparent risks and remedies" },
+        "i5": { "title": "Long-term partnership", "body": "<strong>Aftercare</strong>: 2 months free post-launch (then support plan)<br></br><strong>Scale with growth</strong>: expand systems as revenue rises<br></br><strong>Vendor changes</strong>: help with migration if needed" },
+        "i6": { "title": "Practical modern tech", "body": "<strong>AI for efficiency</strong>: automate docs and support<br></br><strong>Cloud-first</strong>: no servers to buy<br></br><strong>Security standard</strong>: privacy and encryption by default" }
+      }
+    }
+  },
+  "WorkPage": {
+    "title": "Work",
+    "description": "Explore our past projects and case studies.",
+    "og_title": "WORK | KONDAX",
+    "og_description": "KONDAX's work - Explore our past projects and case studies.",
+    "intro": {
+      "hasCases": {
+        "title": "Repeatable solutions to real-world problems.",
+        "description": "We implement systems that let small teams do more with Edge × SQL × Workflows × AI. We disclose problem → solution → impact with numbers."
+      },
+      "noCases": {
+        "title": "Preparing public case studies.",
+        "description": "We're compiling case studies. Even before publication, we can start a PoC, provide estimates, or refine requirements right away.",
+        "ctaContact": "Book a 30-minute intro call"
+      }
+    },
+    "case": { "button": "View details" },
+    "placeholder": {
+      "heading": "Great fits for our approach",
+      "subheading": "Even if your case isn’t listed, we can proceed with a <strong>1-week PoC / 6-month ROI guideline</strong>.",
+      "c1": {
+        "title": "Competitive analysis & data collection",
+        "subtitle": "",
+        "body": "Automate competitor pricing and lead list building via scraping. Cut manual effort by 85%.",
+        "results": ["Price research: 40h/wk → 2h", "Leads: 500/mo → 5,000/mo", "Effort: −85%"],
+        "tech": "n8n × Inngest × Realtime monitoring"
+      },
+      "c2": {
+        "title": "LINE AI customer support",
+        "subtitle": "",
+        "body": "Build LINE AI chat with Cloudflare and Dify. 24/7 auto-response lifts CSAT significantly.",
+        "results": ["Response time: 24h → instant", "Auto-resolution: 78%", "CSAT: +31%"],
+        "tech": "Cloudflare D1 × Workers × Dify × LINE API"
+      },
+      "c3": {
+        "title": "Shopify affiliate system",
+        "subtitle": "",
+        "body": "Build an affiliate program via Shopify App. Achieved +45% revenue on a performance model.",
+        "results": ["Affiliates: 50 → 800", "Payout per result: +23%", "Revenue: +45%"],
+        "tech": "Shopify App × Remix × Prisma × Webhook"
+      },
+      "ctaProcess": "See how we work together"
+    },
+    "bocker": {
+      "description": "Share treatment history, photos, and notes with <strong>co-created client charts</strong> to cut on-site checks. <strong>Detailed sales × analytics</strong> identify repeat bottlenecks and guide next actions. <strong>AI workflow automation (planned)</strong> handles bookings → reminders → DMs. Powerful yet simple ops.",
+      "buttons": { "site": "Open official site", "monitor": "Join free beta" }
+    },
+    "testimonial": { "text": "Fast PoC and phased scaling stabilized our ops in weeks, and costs ended up optimized." }
+  },
+  "BockerPage": {
+    "title": "Service Introduction | Bocker - Beauty Salon Reservation Management System",
+    "description": "Next-generation SaaS reservation management platform with hybrid database configuration, supporting 3,000 salons simultaneously. Integrated with LINE and Stripe Connect for commercial-level scalability.",
+    "intro": {
+      "eyebrow": "Salon Management System",
+      "title": "Bocker",
+      "description": "Reduce on-site confirmation costs by sharing treatment history, photos, and notes through <strong>client charts co-created with customers</strong>. <strong>Detailed sales analysis × access analytics</strong> identify repeat visit bottlenecks and determine next strategies. <strong>AI automated workflow setup (※not yet implemented)</strong> automates routine tasks from booking reception to reminders and DMs. Multifunctional yet simple operation.",
+      "buttons": {
+        "officialSite": "View Official Site",
+        "monitorRecruitment": "Free Monitor Recruitment"
+      }
+    },
+    "projectInfo": {
+      "industry": {
+        "title": "Industry",
+        "item1": "Beauty Salons",
+        "item2": "Nail Salons",
+        "item3": "Hair Salons", 
+        "item4": "Personal Training"
+      },
+      "features": {
+        "title": "Main Features",
+        "item1": "Reservation/Customer/Menu/Product Management",
+        "item2": "Points & Coupons",
+        "item3": "Access Analytics",
+        "item4": "Data Analysis",
+        "item5": "LINE Integration & SNS Marketing Platform"
+      },
+      "development": {
+        "title": "Development Roadmap",
+        "period": "12 months (ongoing development)"
+      }
+    },
+    "mainFeatures": {
+      "title": "Main Features",
+      "feature1": {
+        "title": "All-in-One Salon Management",
+        "description": "Complete all salon operations in one tool, from reservations to customer management, staff, and menu settings.",
+        "detail1": "Staff Management",
+        "detail2": "Menu Settings",
+        "detail3": "Options & Product Sales Features",
+        "detail4": "Automated Reminders & Notifications"
+      },
+      "feature2": {
+        "title": "Advanced Chart Features Connecting with Customers",
+        "description": "Provide high-quality services tailored to each customer with electronic charts that can store images and audio. Encourage return visits with points and coupons.",
+        "detail1": "Customer Management & Chart Features (Image & Audio Input Support)",
+        "detail2": "Points & Coupon Features",
+        "detail3": "Detailed Analysis by Customer"
+      },
+      "feature3": {
+        "title": "Overwhelming Capacity Supporting Business Growth",
+        "description": "Reservation numbers and customer registrations are virtually unlimited. Use with confidence from individual salons to multi-store expansion as your business grows.",
+        "detail1": "Perfect for Solo Salon Owners",
+        "detail2": "Maximum Reservations/Month: Unlimited (PRO)",
+        "detail3": "Maximum Customer Registrations: Unlimited (PRO)"
+      },
+      "feature4": {
+        "title": "Data Analysis and Reliable Support System",
+        "description": "Analyze sales and customer trends in detail, supporting management decisions based on data and salon-specific challenges. 24/7 chat support available.",
+        "detail1": "Detailed Sales Analysis",
+        "detail2": "Access Analytics Features",
+        "detail3": "Chat Support"
+      }
+    },
+    "reasons": {
+      "title": "Why Choose Bocker",
+      "item1": {
+        "title": "No Double Bookings",
+        "description": "Zero worry about multiple bookings at the same time. Prevent opportunity loss and boost sales"
+      },
+      "item2": {
+        "title": "Easy Booking via LINE",
+        "description": "Direct bookings from LINE used by 95% of customers. Easy new customer acquisition"
+      },
+      "item3": {
+        "title": "Cut Business Hours in Half",
+        "description": "Free yourself from phone calls and handwritten management. Focus on customer service"
+      },
+      "item4": {
+        "title": "Visible Sales Data",
+        "description": "Automatically analyze popular menus and busy hours. Make strategic management decisions"
+      }
+    }
+  },
+  "Footer": {
+    "messages": "KONDAX is a system development company that supports small and medium-sized enterprises in Japan by providing website creation, system development, business automation, and AI introduction.",
+    "newsletter": "Newsletter",
+    "newsletterDescription": "Subscribe to get the latest news and articles",
+    "subscribe": "Subscribe",
+    "emailPlaceholder": "Email address",
+    "services": "Services",
+    "company": "Company",
+    "connect": "Connect"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Page not found",
+    "backToHome": "Back to Home"
+  },
+  "Pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "of": "of"
+  },
+  "ContactSection": {
+    "title": "Any questions? Feel free to contact us.",
+    "contact": "Contact us",
+    "location": "Location & Contact"
+  },
+  "Offices": {
+    "name": "KONDAX",
+    "zipcode": "〒669-2133",
+    "address": "Tamba Shino, Hyogo Prefecture",
+    "address2": "Imaichi, Shino-machi, Shimano-cho, Hyogo Prefecture"
+  }
+}

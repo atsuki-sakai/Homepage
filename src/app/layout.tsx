@@ -1,6 +1,28 @@
 import { type Metadata } from 'next'
+import {getLocale} from 'next-intl/server';
+import { Inter, Noto_Sans_JP, Geist } from 'next/font/google'
+import { Toaster } from 'sonner'
 
 import '@/styles/tailwind.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const geist = Geist({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-geist',
+})
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+  variable: '--font-noto-sans-jp',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -9,10 +31,19 @@ export const metadata: Metadata = {
   },
 }
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  const locale = await getLocale();
+ 
   return (
-    <html lang="en" className="h-full bg-neutral-950 text-base antialiased">
-      <body className="flex min-h-full flex-col">{children}</body>
+    <html className={`h-full bg-neutral-950 text-base antialiased ${inter.variable} ${notoSansJP.variable} ${geist.variable}`} lang={locale}>
+      <body className="flex min-h-full flex-col">
+        {children}
+        <Toaster richColors position="top-right" />
+      </body>
     </html>
   )
 }

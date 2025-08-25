@@ -1,37 +1,57 @@
-# Studio
+# Kondax Inc. Corporate Website
 
-Studio is a [Tailwind Plus](https://tailwindcss.com/plus) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+This is the official corporate website for Kondax Inc.
 
-## Getting started
+## Overview
 
-To get started with this template, first install the npm dependencies:
+This project is a modern, responsive corporate website built with the following technologies:
 
-```bash
-npm install
-```
+-   **Framework**: [Next.js](https://nextjs.org/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **CMS**: [Sanity](https://www.sanity.io/)
+-   **Internationalization (i18n)**: Supported for English and Japanese.
 
-Next, run the development server:
+## Getting Started
+
+### Prerequisites
+
+-   Node.js
+-   npm or yarn
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone <repository-url>
+    ```
+2.  Install the dependencies:
+    ```bash
+    npm install
+    ```
+3.  Set up your environment variables. You will need to create a `.env` file and add the necessary Sanity and other environment variables.
+
+### Running the Development Server
+
+To start the development server, run:
 
 ```bash
 npm run dev
 ```
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-## Customizing
+## Sanity CMS
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+The content for this website is managed using Sanity. The Sanity Studio is located in the `sanity-cms` directory.
+
+To run the Sanity Studio locally, navigate to the `sanity-cms` directory and run:
+
+```bash
+cd sanity-cms
+npm install
+sanity dev
+```
 
 ## License
 
-This site template is a commercial product and is licensed under the [Tailwind Plus license](https://tailwindcss.com/plus/license).
-
-## Learn more
-
-To learn more about the technologies used in this site template, see the following resources:
-
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Framer Motion](https://www.framer.com/docs/) - the official Framer Motion documentation
-- [MDX](https://mdxjs.com/) - the official MDX documentation
-# Homepage
+This project is the property of Kondax Inc.

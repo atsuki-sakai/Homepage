@@ -15,7 +15,7 @@ export function GridList({
       <ul
         role="list"
         className={clsx(
-          'grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3',
+          'grid grid-cols-1 gap-10  md:gap-14 sm:grid-cols-2 lg:grid-cols-3',
           className,
         )}
       >
@@ -50,13 +50,16 @@ export function GridListItem({
         <Border position="left" className="pl-8" invert={invert}>
           <strong
             className={clsx(
-              'font-semibold',
+              'font-bold text-lg',
               invert ? 'text-white' : 'text-neutral-950',
             )}
           >
-            {title}.
-          </strong>{' '}
-          {children}
+            {title}
+          </strong>
+          <br/> 
+          <p className='text-sm text-neutral-600 mt-6'>
+            {children}
+          </p>
         </Border>
       </FadeIn>
     </li>

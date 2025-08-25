@@ -26,7 +26,7 @@ export function PageIntro({
           <span className="sr-only"> - </span>
           <span
             className={clsx(
-              'mt-6 block max-w-5xl font-display text-5xl font-medium tracking-tight text-balance text-neutral-950 sm:text-6xl',
+              'mt-6 block max-w-5xl font-display text-5xl font-bold tracking-tight text-balance text-neutral-950 sm:text-6xl',
               centered && 'mx-auto',
             )}
           >

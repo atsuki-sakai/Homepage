@@ -8,11 +8,11 @@ import {
   useRef,
   useState,
 } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
-
+import { useTranslations } from 'next-intl'
+import { Link, usePathname } from '@/i18n/routing'
+import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
@@ -59,30 +59,32 @@ function Header({
   invert?: boolean
 }) {
   let { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!
+  const t = useTranslations('Navigation')
 
   return (
     <Container>
       <div className="flex items-center justify-between">
         <Link
           href="/"
-          aria-label="Home"
-          onMouseEnter={() => setLogoHovered(true)}
-          onMouseLeave={() => setLogoHovered(false)}
+          aria-label={t('home')}
         >
           <Logomark
             className="h-8 sm:hidden"
             invert={invert}
-            filled={logoHovered}
+            fillOnHover
           />
           <Logo
             className="hidden h-8 sm:block"
             invert={invert}
-            filled={logoHovered}
+            fillOnHover
           />
         </Link>
         <div className="flex items-center gap-x-8">
+          <div className='hidden sm:block'>
+            <LanguageSwitcher invert={invert}/>
+          </div>
           <Button href="/contact" invert={invert}>
-            Contact us
+            {t('contact')}
           </Button>
           <button
             ref={toggleRef}
@@ -142,21 +144,28 @@ function NavigationItem({
 }
 
 function Navigation() {
+  const t = useTranslations('Navigation')
+  
   return (
+    <>
+    <div className='sm:hidden flex justify-end bg-neutral-950 p-4'>
+      <LanguageSwitcher invert />
+    </div>
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/">Home</NavigationItem>
-        <NavigationItem href="/about">About Us</NavigationItem>
+        <NavigationItem href="/">{t('home')}</NavigationItem>
+        <NavigationItem href="/about">{t('about')}</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-      <NavigationItem href="/news">News</NavigationItem>
-        <NavigationItem href="/blog">Blog</NavigationItem>
+        <NavigationItem href="/news">{t('news')}</NavigationItem>
+        <NavigationItem href="/blog">{t('blog')}</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/work">Our Work</NavigationItem>
-        <NavigationItem href="/process">Process</NavigationItem>
+        <NavigationItem href="/work">{t('work')}</NavigationItem>
+        <NavigationItem href="/process">{t('process')}</NavigationItem>
       </NavigationRow>
     </nav>
+    </>
   )
 }
 
@@ -164,9 +173,9 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
   let panelId = useId()
   let [expanded, setExpanded] = useState(false)
   let [isTransitioning, setIsTransitioning] = useState(false)
-  let openRef = useRef<React.ElementRef<'button'>>(null)
-  let closeRef = useRef<React.ElementRef<'button'>>(null)
-  let navRef = useRef<React.ElementRef<'div'>>(null)
+  let openRef = useRef<HTMLButtonElement>(null)
+  let closeRef = useRef<HTMLButtonElement>(null)
+  let navRef = useRef<HTMLDivElement>(null)
   let shouldReduceMotion = useReducedMotion()
 
   useEffect(() => {
@@ -198,7 +207,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           className="absolute top-2 right-0 left-0 z-40 pt-14"
           aria-hidden={expanded ? 'true' : undefined}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
-          inert={expanded ? '' : undefined}
+          inert={expanded ? true : undefined}
         >
           <Header
             panelId={panelId}
@@ -222,7 +231,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
           aria-hidden={expanded ? undefined : 'true'}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
-          inert={expanded ? undefined : ''}
+          inert={expanded ? undefined : true}
         >
           <motion.div layout className="bg-neutral-800">
             <div ref={navRef} className="bg-neutral-950 pt-14 pb-16">
@@ -244,6 +253,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
             <Navigation />
             <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
               <Container>
+                
                 <div className="grid grid-cols-1 gap-y-10 pt-10 pb-16 sm:grid-cols-2 sm:pt-16">
                   <div>
                     <h2 className="font-display text-base font-semibold text-white">

@@ -1,7 +1,9 @@
 .typography {
   color: var(--color-neutral-950);
-  font-size: var(--text-xl);
-  line-height: var(--text-xl--line-height);
+  /* モバイル〜デスクトップで流体的に拡大 */
+  font-size: clamp(var(--text-sm), calc(0.9rem + 0.35vw), var(--text-lg));
+  /* 行間はややタイトに（単位なしでフォントサイズ比に追従） */
+  line-height: 1.6;
 
   --shiki-color-text: var(--color-white);
   --shiki-color-background: var(--color-neutral-950);
@@ -24,8 +26,9 @@
     font-weight: var(--font-weight-semibold);
     font-family: var(--font-display);
     font-variation-settings: var(--font-display--font-variation-settings);
-    font-size: var(--text-2xl);
-    line-height: var(--text-2xl--line-height);
+    /* h2 も流体で拡大（ひと回り小さく） */
+    font-size: clamp(var(--text-lg), calc(1.0rem + 0.9vw), var(--text-2xl));
+    line-height: 1.25;
     margin-top: --spacing(16);
   }
 
@@ -33,8 +36,9 @@
     font-weight: var(--font-weight-semibold);
     font-family: var(--font-display);
     font-variation-settings: var(--font-display--font-variation-settings);
-    font-size: var(--text-xl);
-    line-height: var(--text-xl--line-height);
+    /* h3 も流体で拡大（ひと回り小さく） */
+    font-size: clamp(var(--text-base), calc(0.95rem + 0.6vw), var(--text-xl));
+    line-height: 1.3;
     margin-top: --spacing(10);
   }
 
@@ -47,6 +51,13 @@
     padding-left: 1.5rem;
   }
 
+  /* リスト全体の前後余白をやや詰める */
+  :where(.typography > ul),
+  :where(.typography > ol) {
+    margin-top: --spacing(4);
+    margin-bottom: --spacing(4);
+  }
+
   :where(ul) {
     list-style-type: disc;
   }
@@ -57,7 +68,8 @@
 
   :where(li) {
     padding-left: --spacing(3);
-    margin-top: --spacing(6);
+    margin-top: --spacing(3);
+    line-height: 1.5;
   }
 
   :where(li)::marker {
@@ -66,7 +78,7 @@
 
   :where(li > *),
   :where(li li) {
-    margin-top: --spacing(4);
+    margin-top: --spacing(2);
   }
 
   :where(ol > li)::marker {
@@ -122,7 +134,8 @@
   :where(pre code) {
     flex: none;
     padding: theme(padding.8) theme(padding.6);
-    font-size: var(--text-base);
+    /* コードも一段小さく */
+    font-size: clamp(var(--text-xs), calc(0.8rem + 0.15vw), var(--text-sm));
     line-height: theme(lineHeight.8);
     color: var(--color-white);
 
