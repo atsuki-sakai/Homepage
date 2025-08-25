@@ -146,42 +146,73 @@ function ContactForm() {
             {...register('phone')}
             autoComplete="tel"
           />
-          <div className="flex flex-col gap-2 py-6 px-6 border-x border-neutral-300">
+          <div className="flex flex-col gap-2 border-x border-neutral-300 px-6 py-6">
             <Textarea
               placeholder={t('form.messagePlaceholder')}
               {...register('message')}
-              className="m-0 p-0 w-full border-none shadow-none focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="m-0 w-full border-none p-0 shadow-none focus-visible:ring-0 focus-visible:ring-offset-0"
               rows={10}
             />
             {errors.message && (
-              <p className="text-xs text-red-600 mt-1 text-right">{errors.message.message}</p>
+              <p className="mt-1 text-right text-xs text-red-600">
+                {errors.message.message}
+              </p>
             )}
           </div>
           <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset>
-              <legend className="text-sm text-neutral-500">{t('form.budget.legend')}</legend>
+              <legend className="text-sm text-neutral-500">
+                {t('form.budget.legend')}
+              </legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label={t('form.budget.lt50')} {...register('budget')} value="50" />
-                <RadioInput label={t('form.budget.lt100')} {...register('budget')} value="100" />
-                <RadioInput label={t('form.budget.lt300')} {...register('budget')} value="300" />
-                <RadioInput label={t('form.budget.gte300')} {...register('budget')} value="300+" />
-                <RadioInput label={t('form.budget.gte500')} {...register('budget')} value="500+" />
-                <RadioInput label={t('form.budget.gte1000')} {...register('budget')} value="1000+" />
+                <RadioInput
+                  label={t('form.budget.lt50')}
+                  {...register('budget')}
+                  value="50万以下"
+                />
+                <RadioInput
+                  label={t('form.budget.lt100')}
+                  {...register('budget')}
+                  value="100万以下"
+                />
+                <RadioInput
+                  label={t('form.budget.lt300')}
+                  {...register('budget')}
+                  value="300万以下"
+                />
+                <RadioInput
+                  label={t('form.budget.gte300')}
+                  {...register('budget')}
+                  value="300万以上"
+                />
+                <RadioInput
+                  label={t('form.budget.gte500')}
+                  {...register('budget')}
+                  value="500万以上"
+                />
+                <RadioInput
+                  label={t('form.budget.gte1000')}
+                  {...register('budget')}
+                  value="1000万以上"
+                />
               </div>
             </fieldset>
           </div>
           <div className="peer block w-full border border-neutral-300 bg-transparent px-6 py-4 text-base/6 text-neutral-950 ring-4 ring-transparent transition group-first:rounded-t-2xl group-last:rounded-b-2xl focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-hidden">
-            <Select value={selectedCategory} onValueChange={(value) => setValue('category', value)}>
-              <SelectTrigger className='w-full h-full border border-neutral-300'>
+            <Select
+              value={selectedCategory}
+              onValueChange={(value) => setValue('category', value)}
+            >
+              <SelectTrigger className="h-full w-full border border-neutral-300">
                 <SelectValue placeholder={t('form.topicPlaceholder')} />
               </SelectTrigger>
-              <SelectContent className="flex gap-2 peer w-full border border-neutral-300 bg-white text-base/6 text-neutral-950 transition group-first:rounded-t-2xl group-last:rounded-b-2xl focus:border-neutral-500 focus:ring-neutral-500 focus:outline-hidden">
+              <SelectContent className="peer flex w-full gap-2 border border-neutral-300 bg-white text-base/6 text-neutral-950 transition group-first:rounded-t-2xl group-last:rounded-b-2xl focus:border-neutral-500 focus:ring-neutral-500 focus:outline-hidden">
                 {[
                   { value: 'contact', label: t('topics.contact') },
                   { value: 'partner', label: t('topics.partner') },
                   { value: 'estimate', label: t('topics.estimate') },
                   { value: 'monitor', label: t('topics.monitor') },
-                  { value: 'other', label: t('topics.other') }
+                  { value: 'other', label: t('topics.other') },
                 ].map((topic) => (
                   <SelectItem key={topic.value} value={topic.value}>
                     {topic.label}
@@ -192,10 +223,14 @@ function ContactForm() {
           </div>
         </div>
         <Button type="submit" className="mt-10" disabled={isSubmitting}>
-          {isSubmitting ? <div className='flex items-center gap-2'>
-            <Loader2 className='animate-spin' />
-            {t('form.submitting')}
-          </div> : t('form.submit')}
+          {isSubmitting ? (
+            <div className="flex items-center gap-2">
+              <Loader2 className="animate-spin" />
+              {t('form.submitting')}
+            </div>
+          ) : (
+            t('form.submit')
+          )}
         </Button>
       </form>
     </FadeIn>
