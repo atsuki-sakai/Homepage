@@ -2,6 +2,7 @@ import { type Metadata } from 'next'
 import {getLocale} from 'next-intl/server';
 import { Inter, Noto_Sans_JP, Geist } from 'next/font/google'
 import { Toaster } from 'sonner'
+import { getTranslations } from 'next-intl/server'
 
 import '@/styles/tailwind.css'
 
@@ -24,11 +25,17 @@ const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
 })
 
-export const metadata: Metadata = {
-  title: {
-    template: '%s - Studio',
-    default: 'Studio - Award winning developer studio based in Denmark',
-  },
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'HomePage' })
+  return {
+    title: t('title'),
+    description: t('description'),
+  }
 }
 
 export default async function RootLayout({
