@@ -4,6 +4,7 @@ import { EmailContact } from '@/components/template/email_contact';
 import { contactSchema } from '@/lib/schemats';
 import { render } from '@react-email/render'
 import { z } from 'zod';
+import { convertContactTopics } from '@/lib/utils';
 
 
 if(!process.env.RESEND_API_KEY) {
@@ -30,7 +31,7 @@ export async function POST(request: Request) {
     const { data, error } = await resend.emails.send({
         from: 'noreply@kondax.com',
         to: ['kondax.sakai@gmail.com', email],
-        subject: `[${category}] お問い合わせを受け付けました。`,
+        subject: `[${convertContactTopics(category)}] お問い合わせを受け付けました。`,
         html
     });
     console.log('📧 API Route: Resend response received', { data, error });

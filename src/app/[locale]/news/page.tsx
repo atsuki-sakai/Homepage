@@ -62,9 +62,7 @@ export default async function News({ params, searchParams }: Props) {
   return (
     <>
       <PageIntro eyebrow={t('eyebrow')} title={t('pageTitle')}>
-        <p className='text-sm md:text-base'>
-          {t('pageDescription')}
-        </p>
+        <p className="text-sm md:text-base">{t('pageDescription')}</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
@@ -101,7 +99,7 @@ export default async function News({ params, searchParams }: Props) {
                             </div>
                           </dd>
                         </dl>
-                        <p className="mt-6 max-w-2xl text-base text-neutral-600">
+                        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-neutral-600">
                           {post.description}
                         </p>
                         <Button
@@ -123,7 +121,7 @@ export default async function News({ params, searchParams }: Props) {
         </div>
 
         {totalPages > 1 && (
-          <div className="mt-24 flex justify-center items-center gap-4">
+          <div className="mt-24 flex items-center justify-center gap-4">
             {hasPrevPage && (
               <Link
                 href={`?page=${currentPage - 1}`}
@@ -132,11 +130,12 @@ export default async function News({ params, searchParams }: Props) {
                 ← {tPagination('previous')}
               </Link>
             )}
-            
+
             <span className="text-sm text-neutral-600">
-              {tPagination('page')} {currentPage} {tPagination('of')} {totalPages}
+              {tPagination('page')} {currentPage} {tPagination('of')}{' '}
+              {totalPages}
             </span>
-            
+
             {hasNextPage && (
               <Link
                 href={`?page=${currentPage + 1}`}

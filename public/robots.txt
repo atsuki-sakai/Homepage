@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://kondax.com
+
+# Sitemaps
+Sitemap: https://kondax.com/sitemap.xml

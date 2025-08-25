@@ -78,31 +78,32 @@ export default async function Blog({ params, searchParams }: Props) {
   return (
     <>
       <PageIntro eyebrow={t('eyebrow')} title={t('pageTitle')}>
-        <p className='text-sm md:text-base'>
-          {t('pageDescription')}
-        </p>
+        <p className="text-sm md:text-base">{t('pageDescription')}</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         {/* Category Filter */}
         <div className="mb-10">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="text-base font-bold text-neutral-700 mr-2">{t('categoriesLabel')}</span>
+            <span className="mr-2 text-base font-bold text-neutral-700">
+              {t('categoriesLabel')}
+            </span>
             <Link
               href={buildCategoryHref(undefined)}
-              className={`rounded-full border px-3 py-1 text-sm ${!selectedCategory ? 'bg-neutral-950 text-white border-neutral-950' : 'text-neutral-700 border-neutral-300 hover:border-neutral-400'}`}
+              className={`rounded-full border px-3 py-1 text-sm ${!selectedCategory ? 'border-neutral-950 bg-neutral-950 text-white' : 'border-neutral-300 text-neutral-700 hover:border-neutral-400'}`}
             >
               {t('allCategories')}
             </Link>
-            {Array.isArray(categories) && categories.map((cat: string) => (
-              <Link
-                key={cat}
-                href={buildCategoryHref(cat)}
-                className={`rounded-full border px-3 py-1 text-sm ${selectedCategory === cat ? 'bg-neutral-950 text-white border-neutral-950' : 'text-neutral-700 border-neutral-300 hover:border-neutral-400'}`}
-              >
-                {cat}
-              </Link>
-            ))}
+            {Array.isArray(categories) &&
+              categories.map((cat: string) => (
+                <Link
+                  key={cat}
+                  href={buildCategoryHref(cat)}
+                  className={`rounded-full border px-3 py-1 text-sm ${selectedCategory === cat ? 'border-neutral-950 bg-neutral-950 text-white' : 'border-neutral-300 text-neutral-700 hover:border-neutral-400'}`}
+                >
+                  {cat}
+                </Link>
+              ))}
           </div>
         </div>
 
@@ -138,7 +139,7 @@ export default async function Blog({ params, searchParams }: Props) {
                             </div>
                           </dd>
                         </dl>
-                        <p className="mt-6 max-w-2xl text-base text-neutral-600">
+                        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-neutral-600">
                           {blog.description}
                         </p>
                         <Button
@@ -160,7 +161,7 @@ export default async function Blog({ params, searchParams }: Props) {
         </div>
 
         {totalPages > 1 && (
-          <div className="mt-24 flex justify-center items-center gap-4">
+          <div className="mt-24 flex items-center justify-center gap-4">
             {hasPrevPage && (
               <Link
                 href={buildPageHref(currentPage - 1)}
@@ -169,11 +170,12 @@ export default async function Blog({ params, searchParams }: Props) {
                 ← {tPagination('previous')}
               </Link>
             )}
-            
+
             <span className="text-sm text-neutral-600">
-              {tPagination('page')} {currentPage} {tPagination('of')} {totalPages}
+              {tPagination('page')} {currentPage} {tPagination('of')}{' '}
+              {totalPages}
             </span>
-            
+
             {hasNextPage && (
               <Link
                 href={buildPageHref(currentPage + 1)}

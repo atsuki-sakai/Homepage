@@ -43,30 +43,38 @@ async function Clients({ locale }: { locale: string }) {
   return (
     <div className="mt-24 py-20 sm:mt-32 sm:py-32">
       <Container>
-        <FadeIn className="flex items-center gap-x-8 mb-10">
-          <h2 className="text-center font-display text-base font-semibold tracking-wider text-neutral-950 sm:text-left">
+        <FadeIn className="mb-10 flex items-center gap-x-8">
+          <h2 className="text-s, max-w-2/3 text-center font-display text-sm font-semibold tracking-wider text-balance sm:text-left">
             {t('clients_heading')}
           </h2>
-          <svg className="h-1 flex-auto" viewBox="0 0 100 1" preserveAspectRatio="none">
-            <path d="M0 0.5h100v0.5H0z" fill="currentColor"/>
+          <svg
+            className="h-1 flex-auto"
+            viewBox="0 0 100 1"
+            preserveAspectRatio="none"
+          >
+            <path d="M0 0.5h100v0.5H0z" fill="currentColor" />
           </svg>
-         
         </FadeIn>
-        
+
         <div className="relative">
-          <div className="absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none" />
-          <div className="absolute -right-1 top-0 z-10 h-full w-16 bg-gradient-to-l from-white via-white/80 to-transparent pointer-events-none" />
-          
-          <Marquee 
+          <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-16 bg-gradient-to-r from-white via-white/80 to-transparent" />
+          <div className="pointer-events-none absolute top-0 -right-1 z-10 h-full w-16 bg-gradient-to-l from-white via-white/80 to-transparent" />
+
+          <Marquee
             speed={50}
             gradient={false}
             pauseOnHover={true}
             direction="right"
           >
             {clients.map(([client, logo]) => (
-              <div key={client as string} className='mx-2 md:mx-6'>
-                <div className="flex items-center justify-center p-4">
-                  <Image src={logo} alt={client as string} width={120} height={40} unoptimized />
+              <div key={client as string} className="mx-4 md:mx-12">
+                <div className="flex h-[60px] w-[120px] items-center justify-center">
+                  <Image
+                    src={logo}
+                    alt={client as string}
+                    className="h-full w-full object-cover"
+                    unoptimized
+                  />
                 </div>
               </div>
             ))}

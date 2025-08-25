@@ -258,8 +258,10 @@ export default async function Work({ params }: Props) {
         eyebrow="Our Work"
         title={hasCases ? t('intro.hasCases.title') : t('intro.noCases.title')}
       >
-        <p className='text-sm md:text-base  text-neutral-600'>
-          {hasCases ? t('intro.hasCases.description') : t('intro.noCases.description')}
+        <p className="text-sm text-neutral-600 md:text-base">
+          {hasCases
+            ? t('intro.hasCases.description')
+            : t('intro.noCases.description')}
         </p>
         {!hasCases && (
           <div className="mt-8 flex flex-wrap gap-3">
@@ -267,28 +269,41 @@ export default async function Work({ params }: Props) {
           </div>
         )}
       </PageIntro>
-      <div className='grid grid-cols-2 max-w-7xl mx-auto'>
-        <PageIntro
-            eyebrow="Salon Management System"
-            title="Bocker"
-        >
-
-            <p className='text-sm md:text-base  text-neutral-600'>
-                {t.rich('bocker.description', { strong: (c) => <strong>{c}</strong> })}
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="https://bocker.jp/ja" target="_blank" rel="noopener noreferrer">{t('bocker.buttons.site')}</Button>
-            <Button href="/contact?topic=monitor" >{t('bocker.buttons.monitor')}</Button>
-            </div>
-        </PageIntro>
-        <div>
-            <Image src={bockerImage} alt="Bocker" />
+      <div className="mx-auto mt-24 grid max-w-7xl grid-cols-1 md:mt-0 md:grid-cols-2">
+        <div className="h-56 w-full md:h-full">
+          <Image
+            className="h-full w-full object-cover"
+            src={bockerImage}
+            alt="Bocker"
+          />
         </div>
+        <PageIntro eyebrow="Salon Management System" title="Bocker">
+          <p className="text-sm text-neutral-600 md:text-base">
+            {t.rich('bocker.description', {
+              strong: (c) => <strong>{c}</strong>,
+            })}
+          </p>
 
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button
+              href="https://bocker.jp/ja"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t('bocker.buttons.site')}
+            </Button>
+            <Button href="/contact?topic=monitor">
+              {t('bocker.buttons.monitor')}
+            </Button>
+          </div>
+        </PageIntro>
       </div>
 
-      {hasCases ? <CaseStudies caseStudies={caseStudies} locale={locale} /> : <CaseStudiesPlaceholder locale={locale} />}
+      {hasCases ? (
+        <CaseStudies caseStudies={caseStudies} locale={locale} />
+      ) : (
+        <CaseStudiesPlaceholder locale={locale} />
+      )}
 
       {/* 実績があるときのみテスティモニアル＆ロゴを表示 */}
       {hasCases && (

@@ -11,7 +11,7 @@ const navigation = [
     title: 'Services',
     links: [
       { title: 'Bocker', href: '/work/bocker' },
-     
+
       {
         title: (
           <>
@@ -28,6 +28,7 @@ const navigation = [
       { title: 'About', href: '/about' },
       { title: 'Process', href: '/process' },
       { title: 'Blog', href: '/blog' },
+      { title: 'News', href: '/news' },
       { title: 'Contact us', href: '/contact' },
     ],
   },
@@ -65,14 +66,12 @@ function Navigation() {
   )
 }
 
-
-
 function FooterContent() {
   const t = useTranslations('Footer')
   return (
     <div className="max-w-sm">
       <Logo className="h-8" fillOnHover />
-      <div className="text-sm text-neutral-700 mt-4">
+      <div className="mt-4 text-xs leading-relaxed text-neutral-700 md:text-sm">
         {t('messages')}
       </div>
     </div>
