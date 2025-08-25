@@ -169,6 +169,8 @@ function Navigation() {
   )
 }
 
+import { GoogleAnalytics } from './GoogleAnalytics'
+
 function RootLayoutInner({ children }: { children: React.ReactNode }) {
   let panelId = useId()
   let [expanded, setExpanded] = useState(false)
@@ -202,6 +204,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         shouldReduceMotion || !isTransitioning ? { duration: 0 } : undefined
       }
     >
+      <GoogleAnalytics />
       <header>
         <div
           className="absolute top-2 right-0 left-0 z-40 pt-14"
