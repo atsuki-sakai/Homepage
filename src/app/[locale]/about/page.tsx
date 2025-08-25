@@ -48,11 +48,11 @@ const team = [
     title: 'Members',
     people: [
       {
-        name: "ATSUKI SAKAI",
-        role: "__t__about.team.person1.role__",
-        image: { src: "", alt: "ATSUKI SAKAI" },
-        message: "__t__about.team.person1.message__",
-      }
+        name: 'ATSUKI SAKAI',
+        role: 'team.person1.role',
+        image: { src: '', alt: 'ATSUKI SAKAI' },
+        message: 'team.person1.message',
+      },
     ],
   },
   // 拡張時は下記のように増やしてください
@@ -87,36 +87,34 @@ async function Team({ locale }: { locale: string }) {
                     <li key={person.name}>
                       <FadeIn>
                         <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
-                         {
-                          person.image && person.image.src !== "" && (
+                          {person.image && person.image.src !== '' && (
                             <Image
                               {...person.image}
                               className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
                             />
-                          )
-                         }
-                          {
-                            person.image && person.image.src === "" ? (
-                              <div className='h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105 bg-gradient-to-tr from-neutral-800 to-black flex flex-col items-center justify-center'>
-                                 <p className="font-display text-base/6 font-semibold tracking-wide text-white">
+                          )}
+                          {person.image && person.image.src === '' ? (
+                            <div className="flex h-96 w-full flex-col items-center justify-center bg-gradient-to-tr from-neutral-800 to-black object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105">
+                              <p className="font-display text-base/6 font-semibold tracking-wide text-white">
                                 {person.name}
                               </p>
                               <p className="mt-2 text-sm text-white">
-                                {person.role}
+                                {t(person.role)}
                               </p>
-                              <p className='text-xs leading-relaxed text-white p-4'>
-                                {t('team.person1.message')}
+                              <p className="p-4 text-xs leading-relaxed text-white">
+                                {t(person.message)}
                               </p>
-                              </div>
-                            ) : ( <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black to-black/0 to-40% p-6">
+                            </div>
+                          ) : (
+                            <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black to-black/0 to-40% p-6">
                               <p className="font-display text-base/6 font-semibold tracking-wide text-white">
                                 {person.name}
                               </p>
                               <p className="mt-2 text-sm text-white">
                                 {t('team.person1.role')}
                               </p>
-                            </div>)
-                          }
+                            </div>
+                          )}
                         </div>
                       </FadeIn>
                     </li>
