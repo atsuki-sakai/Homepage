@@ -6,43 +6,39 @@ import { Container } from "@/components/Container";
 import { ContactSection } from '@/components/ContactSection'
 import { Border } from '@/components/Border'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { Link } from '@/i18n/routing'
-import { Badge } from "@/components/ui/badge"
-import { CalendarDays, ExternalLink } from "lucide-react"
-import { format } from "date-fns"
-import { Button } from "@/components/Button"
-
+import { Button } from '@/components/Button'
 
 export interface Collection {
-  title: string;
-  description: string;
-  category: string;
-  link: string;
+  title: string
+  description: string
+  category: string
+  link: string
   image?: {
-    width?: number;
-    height?: number;
-    src?: string;
-    alt?: string;
-  };
+    width?: number
+    height?: number
+    src?: string
+    alt?: string
+  }
   points: Array<{
-    title: string;
-    description: string;
-  }>;
-  publishedAt: string;
+    title: string
+    description: string
+  }>
+  publishedAt: string
 }
 
 function Collection({ collection, t }: { collection: Collection; t: any }) {
-  const { title, description, category, image, points, publishedAt, link } = collection;
+  const { title, description, category, image, points, publishedAt, link } =
+    collection
   return (
     <FadeIn>
       <article>
-        <Border className="pt-16 mt-16">
+        <Border className="mt-16 pt-16">
           <div className="relative mb-6">
             {image?.src ? (
-              <div className="relative rounded-3xl overflow-hidden">
+              <div className="relative overflow-hidden rounded-3xl">
                 <Image
                   src={image.src}
-                  alt={image.alt ?? "collection cover"}
+                  alt={image.alt ?? 'collection cover'}
                   width={image.width ?? 1600}
                   height={image.height ?? 900}
                   className="h-64 w-full object-cover"
@@ -52,30 +48,31 @@ function Collection({ collection, t }: { collection: Collection; t: any }) {
               </div>
             ) : null}
           </div>
-          
-          
-          
-          <h3 className="font-display text-2xl font-semibold text-neutral-950 mb-4">
+
+          <div>
+            <p>{category}</p>
+          </div>
+          <h3 className="mb-4 font-display text-2xl font-semibold text-neutral-950">
             {title}
           </h3>
-          
-          <p className="text-base text-neutral-600 mb-8 leading-relaxed">
+
+          <p className="mb-8 text-base leading-relaxed text-neutral-600">
             {description}
           </p>
-          
-          <div className="grid gap-6 sm:grid-cols-2 mb-8">
+
+          <div className="mb-8 grid gap-6 sm:grid-cols-2">
             {points.map((point, index) => (
               <div key={index} className="flex flex-col">
-                <h4 className="text-sm font-semibold text-neutral-950 mb-2">
+                <h4 className="mb-2 text-sm font-semibold text-neutral-950">
                   {point.title}
                 </h4>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm leading-relaxed text-neutral-600">
                   {point.description}
                 </p>
               </div>
             ))}
           </div>
-          
+
           <div className="flex flex-wrap gap-4">
             <Button
               href={link}
@@ -85,17 +82,14 @@ function Collection({ collection, t }: { collection: Collection; t: any }) {
             >
               {t('demoButton')}
             </Button>
-            <Button
-              href="/contact"
-              aria-label={t('consultButton')}
-            >
+            <Button href="/contact" aria-label={t('consultButton')}>
               {t('consultButton')}
             </Button>
           </div>
         </Border>
       </article>
     </FadeIn>
-  );
+  )
 }
 
 
