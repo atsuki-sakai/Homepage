@@ -28,10 +28,15 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
   return {
     title: `${post?.title} | KONDAX`,
-    description: post?.description.slice(0, 120) + '...' || t('og_fallback_description'),
+    description:
+      post?.description.slice(0, 120) + '...' || t('og_fallback_description'),
+    alternates: {
+      canonical: 'https://kondax.com/' + locale + '/blog/' + post?.slug,
+    },
     openGraph: {
       title: `${post?.title} | KONDAX`,
-      description: post?.description.slice(0, 120) + '...' || t('og_fallback_description'),
+      description:
+        post?.description.slice(0, 120) + '...' || t('og_fallback_description'),
       type: 'website',
       locale: locale,
       url: `${baseUrl}/${locale}/blog/${post?.slug}`,

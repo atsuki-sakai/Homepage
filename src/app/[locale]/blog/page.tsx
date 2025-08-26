@@ -23,6 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t('og_title'),
     description: t('og_description'),
+    alternates: {
+      canonical: 'https://kondax.com/' + locale + '/blog',
+    },
     openGraph: {
       title: t('og_title'),
       description: t('og_description'),

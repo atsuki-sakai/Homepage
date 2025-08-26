@@ -25,6 +25,9 @@ export async function generateMetadata({ params }: NewsPageProps): Promise<Metad
   return {
     title: t('og_title'),
     description: t('og_description'),
+    alternates: {
+      canonical: 'https://kondax.com/' + locale + '/news/' + slug,
+    },
     openGraph: {
       title: t('og_title'),
       description: t('og_description'),

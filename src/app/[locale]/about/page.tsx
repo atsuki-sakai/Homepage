@@ -144,6 +144,9 @@ export async function generateMetadata({
   return {
     title: t('og_title'),
     description: t('og_description'),
+    alternates: {
+      canonical: 'https://kondax.com/' + locale + '/about',
+    },
     openGraph: {
       title: t('og_title'),
       description: t('og_description'),
