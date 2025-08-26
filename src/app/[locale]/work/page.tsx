@@ -12,7 +12,6 @@ import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
-import bockerImage from '@/images/mockup.webp'
 
 /* =========================
    CaseStudies（実績あり時）
@@ -105,7 +104,7 @@ async function CaseStudiesPlaceholder({ locale }: { locale: string }) {
   return (
     <Container className="mt-32">
       <FadeIn>
-        <div className="rounded-3xl bg-neutral-950 p-10 text-white sm:p-12">
+        <div className="rounded-3xl bg-neutral-950 p-6 text-white sm:p-12 md:p-10">
           <h2 className="font-display text-2xl font-semibold sm:text-3xl">
             {t('placeholder.heading')}
           </h2>
@@ -119,13 +118,13 @@ async function CaseStudiesPlaceholder({ locale }: { locale: string }) {
             {[{ key: 'c1' }, { key: 'c2' }, { key: 'c3' }].map(({ key }) => (
               <div
                 key={key}
-                className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 transition-colors hover:bg-white/10"
+                className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 transition-colors hover:bg-white/10 md:p-6"
               >
                 <div className="mb-3 flex items-center justify-between">
                   <p className="text-lg font-semibold text-white">
                     {t(`placeholder.${key}.title`)}
                   </p>
-                  <div className="h-2 w-2 rounded-full bg-green-400" />
+                  <div className="min-h-2 min-w-2 rounded-full bg-green-400" />
                 </div>
                 <p className="mb-3 text-sm text-neutral-400">
                   {t(`placeholder.${key}.subtitle`)}
@@ -275,38 +274,6 @@ export default async function Work({ params }: Props) {
           </div>
         )}
       </PageIntro>
-      <div className="mx-auto mt-24 grid max-w-7xl grid-cols-1 md:mt-0 md:grid-cols-2">
-        <div className="h-56 w-full md:h-full">
-          <Image
-            className="h-full w-full object-contain"
-            src={bockerImage}
-            alt="Bocker"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-            width={500}
-            height={500}
-          />
-        </div>
-        <PageIntro eyebrow="Salon Management System" title="Bocker">
-          <p className="text-sm text-neutral-600 md:text-base">
-            {t.rich('bocker.description', {
-              strong: (c) => <strong>{c}</strong>,
-            })}
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button
-              href="https://bocker.jp/ja"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t('bocker.buttons.site')}
-            </Button>
-            <Button href="/contact?topic=monitor">
-              {t('bocker.buttons.monitor')}
-            </Button>
-          </div>
-        </PageIntro>
-      </div>
 
       {hasCases ? (
         <CaseStudies caseStudies={caseStudies} locale={locale} />
@@ -319,7 +286,7 @@ export default async function Work({ params }: Props) {
         <>
           <Testimonial
             className="mt-24 sm:mt-32 lg:mt-40"
-            client={{ name: 'Bocker', logo: bockerImage }}
+            client={{ name: 'Bocker', logo: '/images/mockup.webp' }}
           >
             {t('testimonial.text')}
           </Testimonial>

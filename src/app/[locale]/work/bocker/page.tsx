@@ -1,14 +1,10 @@
 import { type Metadata } from 'next'
 import { notFound } from 'next/navigation'
-
-import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { PageIntro } from '@/components/PageIntro'
 import { getTranslations } from 'next-intl/server'
-import bockerImage from '@/images/mockup.webp'
-import Image from 'next/image'
+import { BockerSection } from '@/components/BockerSection'
 
 // このページで許可するロケールのホワイトリスト
 const WHITELISTED_LOCALES = ['ja', 'en'] as const
@@ -147,38 +143,7 @@ export default async function Bocker({ params }: Props) {
 
   return (
     <>
-      <div className="mx-auto mt-24 grid max-w-7xl grid-cols-1 md:mt-0 md:grid-cols-2">
-        <div className="h-56 w-full md:h-full">
-          <Image
-            className="h-full w-full object-contain"
-            src={bockerImage}
-            alt="Bocker"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-          />
-        </div>
-        <PageIntro eyebrow={t('intro.eyebrow')} title={t('intro.title')}>
-          <p className="text-sm text-neutral-600 md:text-base">
-            {t.rich('intro.description', {
-              strong: (c) => (
-                <strong className="font-semibold text-neutral-950">{c}</strong>
-              ),
-            })}
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button
-              href="https://bocker.jp/ja"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t('intro.buttons.officialSite')}
-            </Button>
-            <Button href="/contact?topic=monitor">
-              {t('intro.buttons.monitorRecruitment')}
-            </Button>
-          </div>
-        </PageIntro>
-      </div>
+      <BockerSection t={t} />
       {/* プロジェクト基本情報 */}
       <Container className="mt-24 sm:mt-32">
         <FadeIn>

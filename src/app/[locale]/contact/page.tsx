@@ -54,7 +54,7 @@ export default async function Contact({
   return (
     <>
       <PageIntro eyebrow="Contact Us" title={t('pageTitle')}>
-        <p className='text-sm md:text-base text-neutral-600'>
+        <p className="text-sm text-neutral-600 md:text-base">
           {t('pageDescription')}
         </p>
       </PageIntro>
@@ -63,11 +63,11 @@ export default async function Contact({
         <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
           <ContactForm />
           <div>
-            <div className="mt-6 text-sm md:text-base text-neutral-600">
-              <h2 className="font-display text-lg font-bold text-neutral-950 mb-6">
+            <div className="mt-6 text-sm text-neutral-600 md:text-base">
+              <h2 className="mb-6 font-display text-lg font-bold text-neutral-950">
                 {t('partner.heading')}
               </h2>
-              <p>
+              <p className="mb-6 text-xs md:text-sm">
                 {t.rich('partner.description', { br: () => <br /> })}
               </p>
 
