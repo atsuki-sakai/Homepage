@@ -10,17 +10,9 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
-import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
-import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
-import bockerImage from '@/images/mockup.png'
+import bockerImage from '@/images/mockup.webp'
 
 /* =========================
    CaseStudies（実績あり時）
@@ -50,8 +42,10 @@ async function CaseStudies({
                     <Image
                       src={caseStudy.logo}
                       alt={caseStudy.client}
-                      className="h-16 w-16 flex-none"
-                      unoptimized
+                      width={64}
+                      height={64}
+                      sizes="64px"
+                      className="h-16 w-16 object-contain"
                     />
                     <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
                       {caseStudy.client}
@@ -179,16 +173,10 @@ async function CaseStudiesPlaceholder({ locale }: { locale: string }) {
 /* =========================
    Clients（ロゴ）— 実績公開後に表示
 ========================= */
-const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
-]
+const clients: {
+  client: string
+  logo: string
+}[] = []
 
 function Clients() {
   return (
@@ -204,11 +192,18 @@ function Clients() {
           role="list"
           className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
         >
-          {clients.map(([client, logo]) => (
+          {clients.map(({ client, logo }) => (
             <li key={client} className="group">
               <FadeIn className="overflow-hidden">
                 <Border className="pt-12 group-nth-[-n+2]:-mt-px sm:group-nth-3:-mt-px lg:group-nth-4:-mt-px">
-                  <Image src={logo} alt={client} unoptimized />
+                  <Image
+                    src={logo}
+                    alt={client as string}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                    className="rounded-3xl object-contain"
+                    width={120}
+                    height={60}
+                  />
                 </Border>
               </FadeIn>
             </li>
@@ -283,9 +278,12 @@ export default async function Work({ params }: Props) {
       <div className="mx-auto mt-24 grid max-w-7xl grid-cols-1 md:mt-0 md:grid-cols-2">
         <div className="h-56 w-full md:h-full">
           <Image
-            className="h-full w-full object-cover"
+            className="h-full w-full object-contain"
             src={bockerImage}
             alt="Bocker"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+            width={500}
+            height={500}
           />
         </div>
         <PageIntro eyebrow="Salon Management System" title="Bocker">
@@ -321,7 +319,7 @@ export default async function Work({ params }: Props) {
         <>
           <Testimonial
             className="mt-24 sm:mt-32 lg:mt-40"
-            client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
+            client={{ name: 'Bocker', logo: bockerImage }}
           >
             {t('testimonial.text')}
           </Testimonial>

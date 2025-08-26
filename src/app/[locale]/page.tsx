@@ -12,17 +12,17 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { StaggerContainer, StaggerItem } from '@/components/StaggerContainer'
-import logo1 from '@/images/clients/1.png'
-import logo2 from '@/images/clients/2.png'
-import logo3 from '@/images/clients/3.png'
-import logo4 from '@/images/clients/4.png'
-import logo5 from '@/images/clients/5.png'
-import logo6 from '@/images/clients/6.png'
-import logo7 from '@/images/clients/7.png'
-import logo8 from '@/images/clients/8.png'
-import logo9 from '@/images/clients/9.png'
-import logo10 from '@/images/clients/10.png'
-import imageLaptop from '@/images/laptop.jpg'
+import logo1 from '@/images/clients/1.webp'
+import logo2 from '@/images/clients/2.webp'
+import logo3 from '@/images/clients/3.webp'
+import logo4 from '@/images/clients/4.webp'
+import logo5 from '@/images/clients/5.webp'
+import logo6 from '@/images/clients/6.webp'
+import logo7 from '@/images/clients/7.webp'
+import logo8 from '@/images/clients/8.webp'
+import logo9 from '@/images/clients/9.webp'
+import logo10 from '@/images/clients/10.webp'
+import imageLaptop from '@/images/laptop.webp'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
@@ -73,7 +73,9 @@ async function Clients({ locale }: { locale: string }) {
                     src={logo}
                     alt={client as string}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                    className="rounded-3xl object-cover"
+                    className="rounded-3xl object-contain"
+                    width={120}
+                    height={60}
                   />
                 </div>
               </div>

@@ -7,7 +7,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { getTranslations } from 'next-intl/server'
-import bockerImage from '@/images/mockup.png'
+import bockerImage from '@/images/mockup.webp'
 import Image from 'next/image'
 
 // このページで許可するロケールのホワイトリスト
@@ -19,8 +19,6 @@ export const dynamicParams = false
 export function generateStaticParams() {
   return WHITELISTED_LOCALES.map((locale) => ({ locale }))
 }
-
-
 
 interface FeaturesProps {
   t: (key: string) => any
@@ -35,8 +33,8 @@ function Features({ t }: FeaturesProps) {
         t('mainFeatures.feature1.detail1'),
         t('mainFeatures.feature1.detail2'),
         t('mainFeatures.feature1.detail3'),
-        t('mainFeatures.feature1.detail4')
-      ]
+        t('mainFeatures.feature1.detail4'),
+      ],
     },
     {
       title: t('mainFeatures.feature2.title'),
@@ -44,8 +42,8 @@ function Features({ t }: FeaturesProps) {
       details: [
         t('mainFeatures.feature2.detail1'),
         t('mainFeatures.feature2.detail2'),
-        t('mainFeatures.feature2.detail3')
-      ]
+        t('mainFeatures.feature2.detail3'),
+      ],
     },
     {
       title: t('mainFeatures.feature3.title'),
@@ -53,8 +51,8 @@ function Features({ t }: FeaturesProps) {
       details: [
         t('mainFeatures.feature3.detail1'),
         t('mainFeatures.feature3.detail2'),
-        t('mainFeatures.feature3.detail3')
-      ]
+        t('mainFeatures.feature3.detail3'),
+      ],
     },
     {
       title: t('mainFeatures.feature4.title'),
@@ -62,9 +60,9 @@ function Features({ t }: FeaturesProps) {
       details: [
         t('mainFeatures.feature4.detail1'),
         t('mainFeatures.feature4.detail2'),
-        t('mainFeatures.feature4.detail3')
-      ]
-    }
+        t('mainFeatures.feature4.detail3'),
+      ],
+    },
   ]
 
   return (
@@ -105,7 +103,6 @@ function Features({ t }: FeaturesProps) {
   )
 }
 
-
 interface Props {
   params: Promise<{ locale: string }>
 }
@@ -133,25 +130,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ],
     },
   }
-}   
+}
 
 export default async function Bocker({ params }: Props) {
   const { locale } = await params
   // ランタイムでも保険としてロケールをチェック
-  if (!WHITELISTED_LOCALES.includes(locale as (typeof WHITELISTED_LOCALES)[number])) {
+  if (
+    !WHITELISTED_LOCALES.includes(
+      locale as (typeof WHITELISTED_LOCALES)[number],
+    )
+  ) {
     notFound()
   }
-  
+
   const t = await getTranslations({ locale, namespace: 'BockerPage' })
-  
+
   return (
     <>
       <div className="mx-auto mt-24 grid max-w-7xl grid-cols-1 md:mt-0 md:grid-cols-2">
         <div className="h-56 w-full md:h-full">
           <Image
-            className="h-full w-full object-cover"
+            className="h-full w-full object-contain"
             src={bockerImage}
             alt="Bocker"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
           />
         </div>
         <PageIntro eyebrow={t('intro.eyebrow')} title={t('intro.title')}>

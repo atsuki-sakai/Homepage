@@ -10,9 +10,9 @@ import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
-import imageLaptop from '@/images/laptop.jpg'
-import imageMeeting from '@/images/meeting.jpg'
-import imageWhiteboard from '@/images/whiteboard.jpg'
+import imageLaptop from '@/images/laptop.webp'
+import imageMeeting from '@/images/meeting.webp'
+import imageWhiteboard from '@/images/whiteboard.webp'
 import { getTranslations } from 'next-intl/server'
 
 function Section({
