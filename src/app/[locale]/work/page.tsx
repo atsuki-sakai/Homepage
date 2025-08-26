@@ -111,41 +111,48 @@ async function CaseStudiesPlaceholder({ locale }: { locale: string }) {
   return (
     <Container className="mt-32">
       <FadeIn>
-        <div className="rounded-3xl bg-neutral-950 p-10 sm:p-12 text-white">
-          <h2 className="font-display text-2xl sm:text-3xl font-semibold">
+        <div className="rounded-3xl bg-neutral-950 p-10 text-white sm:p-12">
+          <h2 className="font-display text-2xl font-semibold sm:text-3xl">
             {t('placeholder.heading')}
           </h2>
           <p className="mt-4 text-neutral-300">
-            {t.rich('placeholder.subheading', { strong: (c) => <strong className="text-white">{c}</strong> })}
+            {t.rich('placeholder.subheading', {
+              strong: (c) => <strong className="text-white">{c}</strong>,
+            })}
           </p>
 
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {[
-              { key: 'c1' },
-              { key: 'c2' },
-              { key: 'c3' },
-            ].map(({ key }) => (
+            {[{ key: 'c1' }, { key: 'c2' }, { key: 'c3' }].map(({ key }) => (
               <div
                 key={key}
-                className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 hover:bg-white/10 transition-colors"
+                className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 transition-colors hover:bg-white/10"
               >
-                <div className="flex items-center justify-between mb-3">
-                  <p className="font-semibold text-lg text-white">{t(`placeholder.${key}.title`)}</p>
+                <div className="mb-3 flex items-center justify-between">
+                  <p className="text-lg font-semibold text-white">
+                    {t(`placeholder.${key}.title`)}
+                  </p>
                   <div className="h-2 w-2 rounded-full bg-green-400" />
                 </div>
-                <p className="text-sm text-neutral-400 mb-3">{t(`placeholder.${key}.subtitle`)}</p>
-                <p className="text-sm text-neutral-300 mb-4">{t(`placeholder.${key}.body`)}</p>
-                
-                <div className="space-y-2 mb-4">
-                  {[0,1,2].map((idx) => (
-                    <div key={idx} className="flex items-center text-xs text-neutral-400">
-                      <div className="w-1.5 h-1.5 rounded-full bg-green-400 mr-2" />
+                <p className="mb-3 text-sm text-neutral-400">
+                  {t(`placeholder.${key}.subtitle`)}
+                </p>
+                <p className="mb-4 text-sm text-neutral-300">
+                  {t(`placeholder.${key}.body`)}
+                </p>
+
+                <div className="mb-4 space-y-2">
+                  {[0, 1, 2].map((idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center text-xs text-neutral-400"
+                    >
+                      <div className="mr-2 h-1.5 w-1.5 rounded-full bg-green-400" />
                       {t(`placeholder.${key}.results.${idx}`)}
                     </div>
                   ))}
                 </div>
-                
-                <div className="text-xs text-neutral-500 font-mono">
+
+                <div className="font-mono text-xs text-neutral-500">
                   {t(`placeholder.${key}.tech`)}
                 </div>
               </div>
@@ -153,9 +160,12 @@ async function CaseStudiesPlaceholder({ locale }: { locale: string }) {
           </div>
 
           <div className="mt-10 border-t border-white/10 pt-8">
-           
             <div className="flex flex-wrap gap-3">
-              <Button href="/process" invert>
+              <Button
+                href="/process"
+                aria-label={t('placeholder.ctaProcess')}
+                invert
+              >
                 {t('placeholder.ctaProcess')}
               </Button>
             </div>
@@ -220,7 +230,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'WorkPage' })
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
-  
+
   return {
     title: t('og_title'),
     description: t('og_description'),
@@ -241,7 +251,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   }
 }
-
 
 /* =========================
    Page
@@ -265,7 +274,9 @@ export default async function Work({ params }: Props) {
         </p>
         {!hasCases && (
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="/contact">{t('intro.noCases.ctaContact')}</Button>
+            <Button href="/contact" aria-label={t('intro.noCases.ctaContact')}>
+              {t('intro.noCases.ctaContact')}
+            </Button>
           </div>
         )}
       </PageIntro>

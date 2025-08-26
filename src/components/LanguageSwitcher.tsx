@@ -21,28 +21,35 @@ export function LanguageSwitcher({ invert = false }: { invert?: boolean }) {
 
   return (
     <Select value={locale} onValueChange={handleLocaleChange}>
-      <SelectTrigger className={clsx(
-        "w-[120px] bg-transparent border rounded-full",
-        invert 
-          ? "border-white/20 text-white hover:bg-white/10" 
-          : "border-neutral-300 text-neutral-950 hover:bg-neutral-50"
-      )}>
-        <SelectValue />
+      <SelectTrigger
+        aria-label="Language Switcher"
+        className={clsx(
+          'w-[120px] rounded-full border bg-transparent',
+          invert
+            ? 'border-white/20 text-white hover:bg-white/10'
+            : 'border-neutral-300 text-neutral-950 hover:bg-neutral-50',
+        )}
+      >
+        <SelectValue aria-label="Language Value" />
       </SelectTrigger>
-      <SelectContent className={clsx(
-        "z-[60]",
-        invert 
-          ? "bg-neutral-950 border-white/20" 
-          : "bg-white border-neutral-200"
-      )} sideOffset={5}>
+      <SelectContent
+        className={clsx(
+          'z-[60]',
+          invert
+            ? 'border-white/20 bg-neutral-950'
+            : 'border-neutral-200 bg-white',
+        )}
+        sideOffset={5}
+      >
         {locales.map((loc) => (
-          <SelectItem 
-            key={loc.code} 
+          <SelectItem
+            key={loc.code}
             value={loc.code}
+            aria-label={loc.label}
             className={clsx(
-              invert 
-                ? "text-white hover:bg-neutral-800 focus:bg-neutral-800" 
-                : "text-neutral-950 hover:bg-neutral-100 focus:bg-neutral-100"
+              invert
+                ? 'text-white hover:bg-neutral-800 focus:bg-neutral-800'
+                : 'text-neutral-950 hover:bg-neutral-100 focus:bg-neutral-100',
             )}
           >
             {loc.label}

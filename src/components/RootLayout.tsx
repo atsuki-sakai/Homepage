@@ -64,26 +64,15 @@ function Header({
   return (
     <Container>
       <div className="flex items-center justify-between">
-        <Link
-          href="/"
-          aria-label={t('home')}
-        >
-          <Logomark
-            className="h-8 sm:hidden"
-            invert={invert}
-            fillOnHover
-          />
-          <Logo
-            className="hidden h-8 sm:block"
-            invert={invert}
-            fillOnHover
-          />
+        <Link href="/" aria-label={t('home')}>
+          <Logomark className="h-8 sm:hidden" invert={invert} fillOnHover />
+          <Logo className="hidden h-8 sm:block" invert={invert} fillOnHover />
         </Link>
         <div className="flex items-center gap-x-8">
-          <div className='hidden sm:block'>
-            <LanguageSwitcher invert={invert}/>
+          <div className="hidden sm:block">
+            <LanguageSwitcher invert={invert} />
           </div>
-          <Button href="/contact" invert={invert}>
+          <Button href="/contact" aria-label={t('contact')} invert={invert}>
             {t('contact')}
           </Button>
           <button

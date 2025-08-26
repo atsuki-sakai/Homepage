@@ -15,7 +15,7 @@ export function ContactSection() {
               {t('title')}
             </h2>
             <div className="mt-6 flex">
-              <Button href="/contact" invert>
+              <Button href="/contact" aria-label={t('contact')} invert>
                 {t('contact')}
               </Button>
             </div>

@@ -90,6 +90,7 @@ async function Team({ locale }: { locale: string }) {
                           {person.image && person.image.src !== '' && (
                             <Image
                               {...person.image}
+                              alt={person.name || ''}
                               className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
                             />
                           )}

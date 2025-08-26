@@ -9,6 +9,7 @@ import InlineCode from '@/components/InlineCode'
 import React from 'react'
 import { format } from 'date-fns'
 import { Metadata } from 'next'
+import Image from 'next/image'
 
 const { projectId, dataset } = client.config();
 const urlFor = (source: SanityImageSource) =>
@@ -155,11 +156,12 @@ export default async function PostPage({
         const src = value ? urlFor(value)?.width(1200).url() : null
         if (!src) return null
         return (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={src}
             alt={typeof (value as any)?.alt === 'string' ? (value as any).alt : 'Image'}
             className="my-6 rounded-lg"
+            width={1200}
+            height={600}
           />
         )
       },
@@ -219,12 +221,12 @@ export default async function PostPage({
           ← {t('backToBlog')}
         </Link>
         {postImageUrl && (
-          <img
+          <Image
             src={postImageUrl}
             alt={post.title || 'Post image'}
             className="aspect-video rounded-xl"
-            width="550"
-            height="310"
+            width={550}
+            height={310}
           />
         )}
         <h1 className="text-4xl font-bold mb-8 text-gray-900">{post.title}</h1>

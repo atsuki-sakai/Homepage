@@ -3,6 +3,7 @@ import clsx from 'clsx'
 
 type ButtonProps = {
   invert?: boolean
+  ariaLabel?: string
 } & (
   | React.ComponentPropsWithoutRef<typeof Link>
   | (React.ComponentPropsWithoutRef<'button'> & { href?: undefined })
@@ -12,6 +13,7 @@ export function Button({
   invert = false,
   className,
   children,
+  ariaLabel,
   ...props
 }: ButtonProps) {
   className = clsx(
@@ -26,7 +28,11 @@ export function Button({
 
   if (typeof props.href === 'undefined') {
     return (
-      <button className={className} {...props}>
+      <button
+        className={className}
+        {...props}
+        aria-label={ariaLabel ?? 'no aria label'}
+      >
         {inner}
       </button>
     )
