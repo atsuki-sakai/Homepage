@@ -11,7 +11,7 @@ const navigation = [
     title: 'Services',
     links: [
       { title: 'Bocker', href: '/work/bocker' },
-
+      { title: 'Gallery', href: '/work/gallery' },
       {
         title: (
           <>

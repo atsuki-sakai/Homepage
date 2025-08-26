@@ -90,7 +90,7 @@ export default async function Blog({ params, searchParams }: Props) {
             </span>
             <Link
               href={buildCategoryHref(undefined)}
-              className={`rounded-full border px-3 py-1 text-sm ${!selectedCategory ? 'border-neutral-950 bg-neutral-950 text-white' : 'border-neutral-300 text-neutral-700 hover:border-neutral-400'}`}
+              className={`rounded-full border px-3 py-1 text-sm uppercase ${!selectedCategory ? 'border-neutral-950 bg-neutral-950 font-bold text-white' : 'border-neutral-300 text-neutral-700 hover:border-neutral-400'}`}
             >
               {t('allCategories')}
             </Link>
@@ -99,7 +99,7 @@ export default async function Blog({ params, searchParams }: Props) {
                 <Link
                   key={cat}
                   href={buildCategoryHref(cat)}
-                  className={`rounded-full border px-3 py-1 text-sm ${selectedCategory === cat ? 'border-neutral-950 bg-neutral-950 text-white' : 'border-neutral-300 text-neutral-700 hover:border-neutral-400'}`}
+                  className={`rounded-full border px-3 py-1 text-sm uppercase ${selectedCategory === cat ? 'border-neutral-950 bg-neutral-950 font-bold text-white' : 'border-neutral-300 text-neutral-700 hover:border-neutral-400'}`}
                 >
                   {cat}
                 </Link>

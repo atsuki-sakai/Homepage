@@ -6,7 +6,9 @@
     "blog": "Blog",
     "news": "News",
     "work": "Work",
-    "contact": "Contact"
+    "contact": "Contact",
+    "bocker": "Bocker",
+    "gallery": "Gallery"
   },
   "HomePage": {
     "title": "Let's work together to create amazing software",
@@ -279,7 +281,7 @@
         "title": "Shopify affiliate system",
         "subtitle": "",
         "body": "Build an affiliate program via Shopify App. Achieved +45% revenue on a performance model.",
-        "results": ["Affiliates: 50 → 800", "Payout per result: +23%", "Revenue: +45%"],
+        "results": ["Affiliates: 50 → 400", "Payout per result: +13%", "Revenue: +25%"],
         "tech": "Shopify App × Remix × Prisma × Webhook"
       },
       "ctaProcess": "See how we work together"
@@ -401,6 +403,119 @@
     "title": "Any questions? Feel free to contact us.",
     "contact": "Contact us",
     "location": "Location & Contact"
+  },
+  "GalleryPage": {
+    "title": "Gallery",
+    "description": "Demo tools and applications we've developed. View our diverse development portfolio including AI tools, business efficiency solutions, and booking systems.",
+    "og_title": "Gallery - Development Case Studies | KONDAX",
+    "og_description": "Demo tools and applications we've developed. View our diverse development portfolio including AI tools, business efficiency solutions, and booking systems.",
+    "eyebrow": "Gallery",
+    "pageTitle": "Development Case Studies",
+    "pageDescription": "Here we showcase the tools and applications we've developed as demos.",
+    "demoButton": "View Demo",
+    "consultButton": "Request Implementation Consultation",
+    "collections": [
+      {
+        "title": "SNS Post & Sales List Collection Tool",
+        "description": "A demo site that automates sales list collection and SNS post generation in one stop. Simply specify a region to collect sales prospect lists in CSV format, and automatically generate SNS posts optimized for target audiences using thinking frameworks. Streamline both sales and marketing simultaneously.",
+        "category": "AI Tools",
+        "link": "https://test-inngest-eight.vercel.app/",
+        "publishedAt": "2025-08-26T00:00:00Z",
+        "points": [
+          {
+            "title": "Automatically collect sales lists by region",
+            "description": "Get sales prospect lists in CSV format by simply selecting a region."
+          },
+          {
+            "title": "Auto-generate target-specific SNS posts",
+            "description": "Optimized using frameworks like AIDA and PREP."
+          },
+          {
+            "title": "Strengthen both sales and customer acquisition",
+            "description": "Support revenue expansion through sales efficiency and SNS-based customer acquisition."
+          },
+          {
+            "title": "Easy to use with CSV management",
+            "description": "Collected lists are in an easy-to-manage and analyze CSV format."
+          }
+        ]
+      },
+      {
+        "title": "LINE×AI Chatbot×RAG",
+        "description": "A chatbot combining LINE and AI with RAG (Retrieval-Augmented Generation). It continuously learns by acquiring knowledge through each conversation, improving customer service accuracy and enabling automation. Can be used for FAQ responses and 24-hour support windows.",
+        "category": "Business Efficiency Solutions",
+        "link": "https://vite-react-template.kondax.workers.dev/",
+        "publishedAt": "2025-01-01T00:00:00Z",
+        "points": [
+          {
+            "title": "RAG-powered AI chatbot",
+            "description": "Next-generation chat that continuously learns knowledge through conversation."
+          },
+          {
+            "title": "Automate FAQ and sales support",
+            "description": "Streamline frequent questions and prospective customer interactions."
+          },
+          {
+            "title": "24-hour operation reduces costs",
+            "description": "Provide customer service that improves satisfaction while reducing personnel costs."
+          },
+          {
+            "title": "Expand customer touchpoints via LINE integration",
+            "description": "Naturally connect with customers through widely-used LINE."
+          }
+        ]
+      },
+      {
+        "title": "AutoRAG Knowledge×File Sharing",
+        "description": "An AutoRAG-powered app for registering and searching internal/external knowledge. Strengthen the knowledge base by inputting Q&A, with automatic indexing every 4 hours. Features CSV bulk upload and file sharing capabilities for centralized information management. Streamline FAQ and manual searches.",
+        "category": "Knowledge Utilization Solutions",
+        "link": "https://file-share-app.kondax.workers.dev/ja/",
+        "publishedAt": "2025-01-01T00:00:00Z",
+        "points": [
+          {
+            "title": "Easy knowledge registration and search",
+            "description": "Strengthen the knowledge base simply by entering Q&A."
+          },
+          {
+            "title": "Maintain latest status with automatic indexing",
+            "description": "Index updates every 4 hours to retain the most current information."
+          },
+          {
+            "title": "Bulk registration via CSV upload",
+            "description": "Add information in bulk to reduce operational burden."
+          },
+          {
+            "title": "Team utilization through file sharing",
+            "description": "Safely share necessary materials internally and externally."
+          }
+        ]
+      },
+      {
+        "title": "Dify Custom Tool×Automatic Booking",
+        "description": "A custom tool integrated with Dify that saves and references information from conversation flow to the DB, automatically creating bookings. Customers can complete bookings just by having natural conversations, reducing input and confirmation effort. Ideal for booking operations in beauty salons, restaurants, and similar businesses.",
+        "category": "Booking Operations Efficiency Solutions",
+        "link": "https://dify-tool.kondax.workers.dev/#/",
+        "publishedAt": "2025-01-01T00:00:00Z",
+        "points": [
+          {
+            "title": "Automatically create bookings from conversation",
+            "description": "Process booking information through natural dialogue and reflect in DB."
+          },
+          {
+            "title": "Significantly reduce operational effort",
+            "description": "Reduce staff input work and confirmation costs."
+          },
+          {
+            "title": "Improve customer experience",
+            "description": "Provide smooth booking experience to enhance customer satisfaction."
+          },
+          {
+            "title": "Applicable across multiple industries",
+            "description": "Can be implemented across beauty, dining, service industries, and more."
+          }
+        ]
+      }
+    ]
   },
   "Offices": {
     "name": "KONDAX",

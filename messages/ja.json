@@ -2,11 +2,13 @@
   "Navigation": {
     "home": "ホーム",
     "about": "私たちについて",
-    "process": "プロセス",
-    "blog": "ブログ",
-    "news": "ニュース",
-    "work": "実績",
-    "contact": "お問い合わせ"
+    "process": "開発の進め方",
+    "blog": "記事紹介",
+    "news": "お知らせ",
+    "work": "実績紹介",
+    "contact": "お問い合わせ",
+    "bocker": "Bocker/予約管理システム",
+    "gallery": "開発事例紹介"
   },
   "HomePage": {
     "title": "KONDAX | AIを活用したソフトウェア開発であなたのビジネスを成長させましょう",
@@ -102,7 +104,7 @@
   "BlogPage": {
     "title": "ブログ",
     "description": "最新の技術情報とインサイトをお届けします。",
-    "eyebrow": "ブログ",
+    "eyebrow": "BLOG",
     "pageTitle": "最新の記事とニュース",
     "pageDescription": "最新の業界ニュースをお届けし、マーケティングチームが古いCSSトリック記事を再活用する新しい方法を見つけています。",
     "readMore": "続きを読む",
@@ -279,7 +281,7 @@
         "title": "Shopifyアフィリエイトシステム",
         "subtitle": "",
         "body": "ShopifyAppでアフィリエイトプログラム構築。成果報酬型で売上45%向上を達成。",
-        "results": ["アフィリエイター: 50→800人", "成果単価: +23%", "売上: +45%"],
+        "results": ["アフィリエイター: 50→400人", "成果単価: +13%", "売上: +25%"],
         "tech": "Shopify App × Remix × Prisma × Webhook"
       },
       "ctaProcess": "依頼した場合の仕事の進め方を見る"
@@ -407,5 +409,118 @@
     "title": "何でもお気軽にご相談ください。",
     "contact": "お問い合わせはこちらから",
     "location": "所在地・連絡先"
+  },
+  "GalleryPage": {
+    "title": "Gallery",
+    "description": "デモとして開発したツールやアプリケーションの事例紹介。AIツール、業務効率化ソリューション、予約システムなど多様な開発実績をご覧いただけます。",
+    "og_title": "Gallery - 開発事例紹介 | KONDAX",
+    "og_description": "デモとして開発したツールやアプリケーションの事例紹介。AIツール、業務効率化ソリューション、予約システムなど多様な開発実績をご覧いただけます。",
+    "eyebrow": "Gallery",
+    "pageTitle": "開発事例紹介",
+    "pageDescription": "デモとして開発したツールやアプリケーションをこちらにまとめています。",
+    "demoButton": "デモを見る",
+    "consultButton": "導入相談をする",
+    "collections": [
+      {
+        "title": "SNS投稿・営業リスト収集ツール",
+        "description": "営業リスト収集とSNS投稿生成をワンストップで自動化するデモサイトです。地域を指定するだけで営業先リストをCSV形式で収集でき、さらに思考フレームワークを用いてターゲット層に最適化したSNS投稿を自動生成。営業とマーケティングを同時に効率化します。",
+        "category": "AIツール",
+        "link": "https://test-inngest-eight.vercel.app/",
+        "publishedAt": "2025-08-26T00:00:00Z",
+        "points": [
+          {
+            "title": "地域指定で営業リストを自動収集",
+            "description": "地域を選択するだけで営業先リストをCSV形式で取得可能。"
+          },
+          {
+            "title": "ターゲット別SNS投稿を自動生成", 
+            "description": "AIDAやPREPなどのフレームワークを活用し最適化。"
+          },
+          {
+            "title": "営業と集客を同時に強化",
+            "description": "営業効率化とSNSを活用した集客で売上拡大を支援。"
+          },
+          {
+            "title": "CSV管理で活用が容易",
+            "description": "収集したリストはCSVで管理・分析しやすい形式。"
+          }
+        ]
+      },
+      {
+        "title": "Line×AIチャットボット×RAG",
+        "description": "LINEとAIを組み合わせたチャットボットにRAG（検索拡張生成）を搭載。対話のたびに知識を取り込み学習し続けるため、顧客対応の精度が高まりサポートの自動化が可能に。FAQ対応や24時間対応窓口として活用できます。(ログイン情報 - user: admin-user、pass: admin-123)",
+        "category": "業務効率化ソリューション",
+        "link": "https://vite-react-template.kondax.workers.dev/",
+        "publishedAt": "2025-01-01T00:00:00Z",
+        "points": [
+          {
+            "title": "RAG搭載AIチャットボット",
+            "description": "会話を通じて知識を学習し続ける次世代型チャット。"
+          },
+          {
+            "title": "FAQや営業支援を自動化",
+            "description": "よくある質問や見込み顧客対応を効率化。"
+          },
+          {
+            "title": "24時間稼働でコスト削減",
+            "description": "人件費を抑えつつ顧客満足度を高める窓口を提供。"
+          },
+          {
+            "title": "LINE連携で顧客接点を拡大",
+            "description": "利用者の多いLINEで自然に顧客とつながる。"
+          }
+        ]
+      },
+      {
+        "title": "AutoRAGナレッジ×ファイル共有",
+        "description": "社内外の知識を登録・検索できるAutoRAG搭載アプリです。Q&A入力でナレッジベースを強化し、4時間ごとに自動インデックス化。CSV一括アップロードやファイル共有機能も備え、情報活用を一元管理。FAQやマニュアル検索を効率化します。",
+        "category": "ナレッジ活用ソリューション",
+        "link": "https://file-share-app.kondax.workers.dev/ja/",
+        "publishedAt": "2025-01-01T00:00:00Z",
+        "points": [
+          {
+            "title": "ナレッジを簡単に登録・検索",
+            "description": "Q&Aを入力するだけで知識ベースを強化可能。"
+          },
+          {
+            "title": "自動インデックス化で最新状態を維持",
+            "description": "4時間ごとにインデックスを更新し最新の情報を保持。"
+          },
+          {
+            "title": "CSVアップロードで一括登録",
+            "description": "情報をまとめて追加でき運用負担を軽減。"
+          },
+          {
+            "title": "ファイル共有でチーム活用",
+            "description": "社内外で必要な資料を安全に共有可能。"
+          }
+        ]
+      },
+      {
+        "title": "Difyカスタムツール×自動予約",
+        "description": "Difyと連携したカスタムツールで、会話の流れからDBに情報を保存・参照し、自動で予約を作成。顧客が自然に会話するだけで予約が完了するため、入力や確認の手間を削減。美容サロンや飲食店など予約業務に最適です。",
+        "category": "予約業務効率化ソリューション",
+        "link": "https://dify-tool.kondax.workers.dev/#/",
+        "publishedAt": "2025-01-01T00:00:00Z",
+        "points": [
+          {
+            "title": "会話から自動で予約を作成",
+            "description": "自然な対話で予約情報を処理しDBに反映。"
+          },
+          {
+            "title": "業務の手間を大幅削減",
+            "description": "スタッフの入力作業や確認コストを軽減。"
+          },
+          {
+            "title": "顧客体験を向上",
+            "description": "スムーズな予約体験を提供し顧客満足度を高める。"
+          },
+          {
+            "title": "多業種で活用可能",
+            "description": "美容・飲食・サービス業など幅広く導入可能。"
+          }
+        ]
+      }
+    ]
   }
 }

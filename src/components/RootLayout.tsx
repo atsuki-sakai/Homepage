@@ -137,23 +137,27 @@ function Navigation() {
   
   return (
     <>
-    <div className='sm:hidden flex justify-end bg-neutral-950 p-4'>
-      <LanguageSwitcher invert />
-    </div>
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
-      <NavigationRow>
-        <NavigationItem href="/">{t('home')}</NavigationItem>
-        <NavigationItem href="/about">{t('about')}</NavigationItem>
-      </NavigationRow>
-      <NavigationRow>
-        <NavigationItem href="/news">{t('news')}</NavigationItem>
-        <NavigationItem href="/blog">{t('blog')}</NavigationItem>
-      </NavigationRow>
-      <NavigationRow>
-        <NavigationItem href="/work">{t('work')}</NavigationItem>
-        <NavigationItem href="/process">{t('process')}</NavigationItem>
-      </NavigationRow>
-    </nav>
+      <div className="flex justify-end bg-neutral-950 p-4 sm:hidden">
+        <LanguageSwitcher invert />
+      </div>
+      <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
+        <NavigationRow>
+          <NavigationItem href="/">{t('home')}</NavigationItem>
+          <NavigationItem href="/about">{t('about')}</NavigationItem>
+        </NavigationRow>
+        <NavigationRow>
+          <NavigationItem href="/news">{t('news')}</NavigationItem>
+          <NavigationItem href="/blog">{t('blog')}</NavigationItem>
+        </NavigationRow>
+        <NavigationRow>
+          <NavigationItem href="/work">{t('work')}</NavigationItem>
+          <NavigationItem href="/process">{t('process')}</NavigationItem>
+        </NavigationRow>
+        <NavigationRow>
+          <NavigationItem href="/work/bocker">{t('bocker')}</NavigationItem>
+          <NavigationItem href="/work/gallery">{t('gallery')}</NavigationItem>
+        </NavigationRow>
+      </nav>
     </>
   )
 }
