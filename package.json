@@ -8,7 +8,12 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "browserslist": "defaults, not ie <= 11",
+  "browserslist": [
+    "chrome >= 91",
+    "firefox >= 90", 
+    "edge >= 91",
+    "safari >= 14"
+  ],
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
     "@leafac/rehype-shiki": "^2.2.1",

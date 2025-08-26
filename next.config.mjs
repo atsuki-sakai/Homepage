@@ -15,6 +15,11 @@ import createNextIntlPlugin from 'next-intl/plugin'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  compiler: {
+    // Remove console.log statements in production
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  outputFileTracingRoot: path.join(process.cwd()),
 }
 
 function remarkMDXLayout(source, metaName) {
