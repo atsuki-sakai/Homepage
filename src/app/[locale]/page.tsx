@@ -72,8 +72,8 @@ async function Clients({ locale }: { locale: string }) {
                   <Image
                     src={logo}
                     alt={client as string}
-                    className="h-full w-full object-cover"
-                    unoptimized
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                    className="rounded-3xl object-cover"
                   />
                 </div>
               </div>
@@ -100,7 +100,7 @@ async function CaseStudies({
         title={t('system.title')}
         className="mt-24 sm:mt-32 lg:mt-40"
       >
-        <p className='text-sm md:text-base'>
+        <p className="text-sm md:text-base">
           {t.rich('system.description', {
             strong: (chunks) => <strong>{chunks}</strong>,
             br: () => <br />,
@@ -118,8 +118,8 @@ async function CaseStudies({
                     <Image
                       src={caseStudy.logo}
                       alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
+                      className="h-16 w-16 object-contain"
+                      sizes="64px"
                     />
                   </Link>
                 </h3>
